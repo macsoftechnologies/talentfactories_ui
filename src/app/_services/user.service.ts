@@ -10,15 +10,15 @@ export class UserService {
     constructor(private http: HttpClient) { }
 
     getAll() {
-        return this.http.get<User[]>(`${environment.BACKEND_URL}/auth/users`);
+        return this.http.get<User[]>(`${environment.BACKEND_URL}/user/all`);
     }
 
     getById(id: number) {
-        return this.http.get(`${environment.BACKEND_URL}/auth/user/id` + id);
+        return this.http.get(`${environment.BACKEND_URL}/user/id` + id);
     }
 
     register(user: User) {
-        return this.http.post(`${environment.BACKEND_URL}/auth/register`, user);
+        return this.http.post(`${environment.BACKEND_URL}/user/register`, user);
     }
 
     // update(user: User) {

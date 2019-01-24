@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent} from './home/home.component';
@@ -17,6 +18,12 @@ import { MatButtonModule,
         MatCardModule} from '@angular/material';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './login/login.component';
+
+import { AuthenticationService } from './_services/authentication.service';
+import { AlertService } from './_services/alert.service';
+import { AlertComponent } from './components/alert/alert.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +31,14 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     HelloComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    AlertComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -37,7 +48,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    AuthenticationService,
+    AlertService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

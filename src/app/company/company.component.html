@@ -1,3 +1,53 @@
-<p>
-  company works!
-</p>
+<div class="login-box-body">
+  <mat-tab-group>
+    <mat-tab label="Login">
+      <mat-card class="my-card">
+        <mat-card-content>
+          <form class="my-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" placeholder="Email" name="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                required>
+              <mat-error>Email is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" placeholder="Password" name="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                required>
+              <mat-error>Password is required</mat-error>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button [disabled]="loginForm.invalid" (click)="login()" color="primary">LOGIN</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Register">
+      <mat-card class="my-card">
+        <mat-card-content>
+          <form class="my-form" [formGroup]="companyRegistration" (ngSubmit)="onCompanyRegistration()">
+            <mat-form-field class="full-width">
+              <mat-label>Company Name</mat-label>
+              <input matInput formControlName="companyName" placeholder="Company Name" name="companyName" required>
+              <mat-error>Company Name is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" placeholder="Email" name="email" required>
+              <mat-error>Email is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" placeholder="Password" name="password" required>
+              <mat-error>Password is required</mat-error>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button [disabled]="companyRegistration.invalid" (click)="register()" color="primary">REGISTER</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HelloComponent } from './hello/hello.component';
@@ -12,12 +13,21 @@ import { HelloComponent } from './hello/hello.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {
-  MatButtonModule,
-  MatMenuModule,
-  MatToolbarModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
   MatIconModule,
-  MatCardModule
+  MatButtonModule,
+  MatCheckboxModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRadioModule,
+  MatListModule,
+  MatMenuModule,
+  MatTabsModule
 } from '@angular/material';
+/* MatNativeDateModule,MatDatepickerModule,MatIconModule,MatButtonModule,MatCheckboxModule, MatToolbarModule, MatCardModule,MatFormFieldModule,MatInputModule,MatRadioModule,MatListModule */
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './login/login.component';
@@ -47,6 +57,7 @@ import { CandidateComponent } from './candidate/candidate.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -54,11 +65,33 @@ import { CandidateComponent } from './candidate/candidate.component';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatListModule,
+    MatTabsModule
   ],
   providers: [
     AuthenticationService,
     AlertService
+  ],
+  exports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatListModule
   ],
   bootstrap: [AppComponent]
 })

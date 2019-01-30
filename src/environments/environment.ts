@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: 'http://localhost:8080' + '/talentfactories-core/service'
+  BACKEND_URL: 'http://localhost:8080' + '/talentfactories-core/service',
+  LOCAL_URL: 'http://192.168.0.102:8080/talentfactories-core/service'
 };
 
 /*

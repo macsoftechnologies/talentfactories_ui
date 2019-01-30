@@ -25,7 +25,8 @@ import {
   MatRadioModule,
   MatListModule,
   MatMenuModule,
-  MatTabsModule
+  MatTabsModule,
+  MatSelectModule
 } from '@angular/material';
 /* MatNativeDateModule,MatDatepickerModule,MatIconModule,MatButtonModule,MatCheckboxModule, MatToolbarModule, MatCardModule,MatFormFieldModule,MatInputModule,MatRadioModule,MatListModule */
 import { HeaderComponent } from './components/header/header.component';
@@ -73,7 +74,8 @@ import { CandidateComponent } from './candidate/candidate.component';
     MatInputModule,
     MatRadioModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ],
   providers: [
     AuthenticationService,

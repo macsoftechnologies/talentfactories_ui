@@ -15,17 +15,18 @@
               <input matInput type="password" formControlName="userpassword" placeholder="Password" required>
               <mat-error>Password is required</mat-error>
             </mat-form-field>
+            <button mat-raised-button [disabled]="candidateLoginForm.invalid" color="primary">LOGIN</button>
           </form>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button [disabled]="candidateLoginForm.invalid" color="primary">LOGIN</button>
+
         </mat-card-actions>
       </mat-card>
     </mat-tab>
     <mat-tab label="Register">
       <mat-card class="my-card">
         <mat-card-content>
-          <form class="my-form" [formGroup]="candidateRegistrationForm" (ngSubmit)="onCandidateRegistration()">
+          <form class="my-form" [formGroup]="candidateRegistrationForm" (ngSubmit)="onCandidateRegistration(candidateRegistrationForm)">
             <mat-form-field class="full-width">
               <mat-label>First Name</mat-label>
               <input matInput formControlName="firstName" placeholder="First Name" name="firstName" required>
@@ -43,14 +44,13 @@
             </mat-form-field>
             <mat-form-field class="full-width">
               <mat-label>Password</mat-label>
-              <input matInput formControlName="password" placeholder="Password" name="password" required>
+              <input matInput type="password" formControlName="password" placeholder="Password" name="password"
+                required>
               <mat-error>Password is required</mat-error>
             </mat-form-field>
+            <button mat-raised-button [disabled]="candidateRegistrationForm.invalid" color="primary">REGISTER</button>
           </form>
         </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button [disabled]="candidateRegistrationForm.invalid" (click)="register()" color="primary">REGISTER</button>
-        </mat-card-actions>
       </mat-card>
     </mat-tab>
   </mat-tab-group>

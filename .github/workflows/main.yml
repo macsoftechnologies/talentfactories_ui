@@ -27,14 +27,14 @@ jobs:
         with:
           node-version: 18
                     
-      #- name: Install npm dependencies
-        #run: npm install
+      - name: Install npm dependencies
+        run: npm install
         
-      #- name: Run build task
-        #run: npm run build --if-present
+      - name: Run build task
+        run: npm run build --if-present
         
-      #- name: Deploy to DigitalOcean Server
-        #uses: easingthemes/ssh-deploy@main        
+      - name: Deploy to DigitalOcean Server
+        uses: easingthemes/ssh-deploy@main        
         #env:
           #SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
           #ARGS: "-rlgoDzvc -i --delete"

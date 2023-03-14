@@ -43,3 +43,7 @@ jobs:
           REMOTE_USER: "root"
           TARGET: "/var/www/html/talentfactories-ui/"
           EXCLUDE: "/dist/, /node_modules/"
+          SCRIPT_BEFORE: |
+            whoami
+          SCRIPT_AFTER: |
+            whoami

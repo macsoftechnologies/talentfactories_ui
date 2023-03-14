@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to DigitalOcean Server
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_01 }}
+          SSH_PRIVATE_KEY: ${{ secrets.DIGITALOCEAN_THESK }}
           ARGS: "-rlgoDzvc -i"
           SOURCE: "build/"
           REMOTE_HOST: "143.198.16.35"

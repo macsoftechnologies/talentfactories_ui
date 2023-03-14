@@ -20,18 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout the files
-      - uses: actions/checkout@main
-        
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$DROPLET_NYC3_TALENT_2_01_PVT" > ~/.ssh/deploy.key
-          sudo chmod 600 ~/.ssh/deploy.key
-          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-        shell: bash
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.DROPLET_NYC3_TALENT_2_01_PVT}}
-          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+        uses: actions/checkout@main
 
       - name: Install Node.js
         uses: actions/setup-node@v3

@@ -22,37 +22,24 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@main
 
-      #- name: Install Node.js
-      #  uses: actions/setup-node@v3
-      #  with:
-      #    node-version: 18
-                    
-      #- name: Install npm dependencies
-      #  run: npm install
-        
-      #- name: Run build task
-      #  run: npm run build --if-present
-        
-      #- name: Deploy to DigitalOcean Server
-      #  uses: easingthemes/ssh-deploy@main        
-      #  env:
-      #    SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
-      #    ARGS: "-rlgoDzvc -i --delete"
-      #    SOURCE: "build/"
-      #    REMOTE_HOST: "143.198.16.35"
-      #    REMOTE_USER: "root"
-      #    TARGET: "/var/www/html/talentfactories-ui/"
-      #    EXCLUDE: "/dist/, /node_modules/"
-      #    SCRIPT_BEFORE: |
-      #      whoami
-      #    SCRIPT_AFTER: |
-      #      whoami
-            
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v0.1.8
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          host: "143.198.16.35"
-          username: "root"
-          key: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
-          port: 22
-          script: whoami
+          node-version: 18
+                    
+      - name: Install npm dependencies
+        run: npm install
+        
+      - name: Run build task
+        run: npm run build --if-present
+        
+      - name: Deploy to DigitalOcean Server
+        uses: easingthemes/ssh-deploy@main        
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "/var/www/html/talentfactories-ui/"
+          EXCLUDE: "/dist/, /node_modules/"

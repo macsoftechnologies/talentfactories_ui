@@ -35,11 +35,11 @@ jobs:
         
       - name: Deploy to DigitalOcean Server
         uses: easingthemes/ssh-deploy@main        
-        #env:
-          #SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
-          #ARGS: "-rlgoDzvc -i --delete"
-          #SOURCE: "build/"
-          #REMOTE_HOST: "143.198.16.35"
-          #REMOTE_USER: "root"
-          #TARGET: "/var/www/html/talentfactories-ui/"
-          #EXCLUDE: "/dist/, /node_modules/"
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: "143.198.16.35"
+          REMOTE_USER: "root"
+          TARGET: "/var/www/html/talentfactories-ui/"
+          EXCLUDE: "/dist/, /node_modules/"

@@ -15,10 +15,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        working-directory: talentfactories-ui
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,7 +23,8 @@ jobs:
         uses: actions/checkout@main
         
       - name: directory  
-        run: ls -R
+        run: |
+            ls ${{github.workspace}}
         
       - name: Install Node.js
         uses: actions/setup-node@v3

@@ -49,7 +49,7 @@ jobs:
       #      whoami
             
       - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@0.1.8
+        uses: appleboy/ssh-action@v0.1.8
         with:
           host: "143.198.16.35"
           username: "root"

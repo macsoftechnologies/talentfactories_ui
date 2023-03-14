@@ -18,7 +18,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: ${{ env.WORKING_DRIECTORY }}
+        working-directory: talentfactories-ui
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,7 +28,6 @@ jobs:
         
       - name: directory  
         run: ls -R
-        working-directory: ${{ env.WORKING_DRIECTORY }}
         
       - name: Install Node.js
         uses: actions/setup-node@v3

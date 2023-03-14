@@ -22,10 +22,6 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@main
         
-      - name: directory  
-        run: |
-            ls ${{github.workspace}}
-        
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -37,7 +33,7 @@ jobs:
       - name: Run build task
         run: npm run build
         
-      - name: directory new  
+      - name: directory after build  
         run: |
             ls ${{github.workspace}}
         
@@ -46,8 +42,9 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DROPLET_NYC3_TALENT_2_01_PVT }}
           ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: "build/"
+          SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/dist/, /node_modules/"
+          #EXCLUDE: "/dist/, /node_modules/"
+          EXCLUDE: "/node_modules/"

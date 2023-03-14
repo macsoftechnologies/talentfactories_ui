@@ -1,6 +1,6 @@
 {
-  "name": "talentfactory",
-  "version": "0.0.0",
+  "name": "talentfactories-ui",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

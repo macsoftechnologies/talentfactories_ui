@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout the files
-        uses: actions/checkout@firebase-deploy
+        uses: actions/checkout@main
              
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

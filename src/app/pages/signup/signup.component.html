@@ -1,0 +1,145 @@
+<section class="container text-center py-5 py-md-6 py-xl-7">
+  <a href="index.html">
+    <img src="assets/img/svg/logo.svg" alt="" />
+  </a>
+
+  <h3 class="fw-normal text-dark mt-5">Create your account</h3>
+
+  <div class="row justify-content-center mt-4 pt-3">
+    <div class="col-md-6 col-lg-4">
+      <form [formGroup]="SignupForm">
+        <div class="form-group">
+          <label
+            >First Name<sup
+              ><i class="fa fa-asterisk" aria-hidden="true"></i></sup
+          ></label>
+          <input
+            type="text"
+            class="form-control"
+            id="Name"
+            formControlName="Name"
+          />
+          <!-- <span
+          [class.is-invalid]="
+              (SignupForm.get('Name').invalid &&
+                SignupForm.get('Name').touched) ||
+              (SignupForm.get('Name').pristine && hasError)
+            "
+            class="error"
+            *ngIf="
+              (SignupForm.get('Name').invalid &&
+                SignupForm.get('Name').touched) ||
+              (SignupForm.get('Name').pristine && hasError)
+            "
+            >Please enter your Name</span
+          > -->
+        </div>
+        <div class="form-group">
+          <label
+            >E-mail<sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup
+          ></label>
+          <input
+            type="text"
+            class="form-control"
+            id="Email"
+            formControlName="Email"
+          />
+          <!-- <span
+          [class.is-invalid]="
+              (SignupForm.get('Email').invalid &&
+                SignupForm.get('Email').touched) ||
+              (SignupForm.get('Email').pristine && hasError)
+            "
+            class="error"
+            *ngIf="
+              (SignupForm.get('Email').invalid &&
+                SignupForm.get('Email').touched) ||
+              (SignupForm.get('Email').pristine && hasError)
+            "
+            >Please enter your Email</span
+          > -->
+        </div>
+        <div class="form-group">
+          <label
+            >Phone Number<sup
+              ><i class="fa fa-asterisk" aria-hidden="true"></i></sup></label
+          ><input
+            type="number"
+            class="form-control"
+            id="PhNumber"
+            formControlName="PhNumber"
+            onKeyPress="if(this.value.length==10) return false;"
+          />
+          <!-- <span
+          [class.is-invalid]="
+          (SignupForm.get('PhNumber').invalid &&
+            SignupForm.get('PhNumber').touched) ||
+          (SignupForm.get('PhNumber').pristine && hasError)
+        "
+            class="error"
+            *ngIf="
+              (SignupForm.get('PhNumber').invalid &&
+                SignupForm.get('PhNumber').touched) ||
+              (SignupForm.get('PhNumber').pristine && hasError)
+            "
+            >Please enter your Phone Number</span
+          > -->
+        </div>
+        <div class="form-group">
+          <label>
+            Password<sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup
+          ></label>
+          <input
+            type="password"
+            class="form-control"
+            id="Password"
+            formControlName="Password"
+          />
+          <!-- <span
+             [class.is-invalid]="
+              (SignupForm.get('Password').invalid &&
+                SignupForm.get('Password').touched) ||
+              (SignupForm.get('Password').pristine && hasError)
+            "
+            class="error"
+            *ngIf="
+              (SignupForm.get('Password').invalid &&
+                SignupForm.get('Password').touched) ||
+              (SignupForm.get('Password').pristine && hasError)
+            "
+            >This field is required</span
+          > -->
+        </div>
+
+        <!--   <div class="mb-3">
+            <input type="email" name="email" placeholder="Email" class="form-control form-control-lg bg-pastel-darkblue">
+          </div>
+
+          <div class="mb-3">
+            <input type="text" name="phNumber" placeholder="Phone Number" class="form-control form-control-lg bg-pastel-darkblue">
+          </div>
+          <div class="mb-3">
+            <input type="password" name="password" placeholder="Password" class="form-control form-control-lg bg-pastel-darkblue">
+          </div>
+           <div class="mb-3 text-start">
+            <div class="form-check fs-sm text-secondary mt-4">
+              <input type="checkbox" class="form-check-input" id="customCheck1">
+              <label class="form-check-label" for="customCheck1">
+                I've read & agree with <a href="#">the terms</a>.
+              </label>
+            </div>
+          </div>
+
+          <input type="submit" class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift mt-4" value="Create account">
+ -->
+        <button type="submit" class="btn btn-primary" (click)="signup()">
+          signup
+        </button>
+        <div class="text-secondary fs-sm mt-5">
+          Already have an account?
+          <a [routerLink]="['/Sign-In']">Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

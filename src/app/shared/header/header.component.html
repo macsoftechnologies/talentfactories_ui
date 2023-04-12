@@ -1,33 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark border-0 bg-transparent position-absolute start-0 end-0" role="navigation">
-    
-    <div class="container">
-    
-    
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav
+  class="navbar navbar-expand-lg navbar-dark border-0 bg-transparent position-absolute start-0 end-0"
+  role="navigation"
+>
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar-collapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <a class="navbar-brand" href="index.html">
-        <span>Talent Factory</span>                
+    <a class="navbar-brand" href="index.html">
+      <span>Talent Factories</span>
+    </a>
+
+    <div class="dropdown d-flex d-lg-none">
+      <a
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <span class="avatar">
+          <img
+            src="assets/img/uifaces/9.jpg"
+            class="avatar-image rounded-circle"
+            alt=""
+          />
+        </span>
       </a>
-
-      <div class="dropdown d-flex d-lg-none">
-        <a href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="avatar">
-            <img src="assets/img/uifaces/9.jpg" class="avatar-image rounded-circle" alt="">
-          </span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-end">
-          <a class="dropdown-item" href="#!">My profile</a>
-          <a class="dropdown-item" href="#!">Account settings</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#!">Log out</a>
-        </div>
+      <div class="dropdown-menu dropdown-menu-end">
+        <a class="dropdown-item" href="#!">My profile</a>
+        <a class="dropdown-item" href="#!">Account settings</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#!">Log out</a>
       </div>
+    </div>
 
-      <div class="collapse navbar-collapse mt-3 mt-md-0" id="navbar-collapse">
-        <ul class="navbar-nav align-items-lg-center justify-content-end w-100">
-          <!-- <li class="nav-item dropdown">
+    <div class="collapse navbar-collapse mt-3 mt-md-0" id="navbar-collapse">
+      <ul class="navbar-nav align-items-lg-center justify-content-end w-100">
+        <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
               Landing
             </a>
@@ -64,17 +77,24 @@
               </li>
             </ul>
           </li> -->
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
-              Pages
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" [routerLink]="['/About-Us']" >
-                  About us
-                </a>
-              </li>
-              <!-- <li>
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="['/About-Us']">
+                About Us
+              </a>
+            </li>
+            <!-- <li>
                 <a href="contact.html" class="dropdown-item">
                   Contact
                 </a>
@@ -134,18 +154,25 @@
                   Invoice
                 </a>
               </li> -->
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
-              Authentication
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown dropend">
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            Authentication
+          </a>
+          <ul class="dropdown-menu">
+            <!-- <li class="dropdown dropend">
                 <a [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign up
                 </a>
-                <!-- <ul class="dropdown-menu">
+                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="sign-up.html">Basic</a>
                   </li>
@@ -155,13 +182,186 @@
                   <li>
                     <a class="dropdown-item" href="sign-up-cover.html">Side cover</a>
                   </li>
-                </ul> -->
-              </li>
-              <li class="dropdown dropend">
+                </ul> 
+              </li>-->
+            <li class="dropdown dropend">
+              <a
+                class="dropdown-item dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Institutions
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Institutions')"
+                    [routerLink]="['/Sign-Up']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Institutions')"
+                    [routerLink]="['/Sign-In']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown dropend">
+              <a
+                class="dropdown-item dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Professional
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Professional')"
+                    [routerLink]="['/Sign-Up']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Professional')"
+                    [routerLink]="['/Sign-In']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown dropend">
+              <a
+                class="dropdown-item dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Student
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Student')"
+                    [routerLink]="['/Sign-Up']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Student')"
+                    [routerLink]="['/Sign-In']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown dropend">
+              <a
+                class="dropdown-item dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Employer
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Employer')"
+                    [routerLink]="['/Sign-Up']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Employer')"
+                    [routerLink]="['/Sign-In']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown dropend">
+              <a
+                class="dropdown-item dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Admin
+              </a>
+              <ul class="dropdown-menu">
+                <!-- <li class="dropdown dropend">
+                    <a (click)="signupType('Admin')" [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sign up
+                    </a>
+                  </li> -->
+                <li class="dropdown dropend">
+                  <a
+                    (click)="signupType('Admin')"
+                    [routerLink]="['/Sign-In']"
+                    class="dropdown-item dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="dropdown dropend">
                 <a [routerLink]="['/Sign-In']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sign in
                 </a>
-                <!-- <ul class="dropdown-menu">
+                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="sign-in.html">Basic</a>
                   </li>
@@ -172,7 +372,7 @@
                     <a class="dropdown-item" href="sign-in-cover.html">Side cover</a>
                   </li>
                 </ul> -->
-              <!-- </li>
+            <!-- </li>
               <li class="dropdown dropend">
                 <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Recover password
@@ -196,9 +396,9 @@
                   2-step verification
                 </a>
               </li> -->
-            </ul>
-          </li>
-          <!-- <li class="nav-item dropdown">
+          </ul>
+        </li>
+        <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Theme docs
             </a>
@@ -220,12 +420,12 @@
               </li>
             </ul>
           </li> -->
-          <!-- <li class="nav-item ms-lg-4">
+        <!-- <li class="nav-item ms-lg-4">
             <a href="#!" class="btn btn-purple btn-sm">
               Buy now
             </a>
           </li> -->
-        </ul>
-      </div>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>

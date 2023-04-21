@@ -42,7 +42,7 @@ export class SigninComponent {
             this.signinForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Institution Successfully Sign-In',
+              text: 'Successfully Sign-In',
             });
             this.router.navigateByUrl('/institution-dashboard');
           } else {
@@ -62,7 +62,7 @@ export class SigninComponent {
             this.signinForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Professional Successfully Sign-In',
+              text: 'Successfully Sign-In',
             });
             this.router.navigateByUrl('/professional-dashboard');
           } else {
@@ -82,7 +82,7 @@ export class SigninComponent {
             this.signinForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Student Successfully Sign-In',
+              text: 'Successfully Sign-In',
             });
             this.router.navigateByUrl('/student-dashboard');
           } else {
@@ -102,7 +102,7 @@ export class SigninComponent {
             this.signinForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Employer Successfully Sign-In',
+              text: 'Successfully Sign-In',
             });
             this.router.navigateByUrl('/employer-dashboard');
           } else {
@@ -138,7 +138,7 @@ export class SigninComponent {
       }
     } else {
       this.hasError = true;
-      console.log('Error');
+      console.log('AllError');
     }
   }
 }

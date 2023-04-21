@@ -40,7 +40,7 @@ export class ServiceService {
   public professionalSignUp(data: any): Observable<any> {
     try {
       return this.httpClient.post(
-        environment.baseUrl + 'learning-org/AddlearnOrg',
+        environment.baseUrl + 'professional/createProfessional',
         data
       );
     } catch (error) {

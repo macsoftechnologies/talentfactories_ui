@@ -4,3 +4,11 @@
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
 }
+
+.dropdown-menu {
+  min-width: 9rem !important;
+  // margin-right: 3px;
+}
+.dropdown-sign {
+  min-width: 6rem !important;
+}

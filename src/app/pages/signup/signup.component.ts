@@ -46,7 +46,7 @@ export class SignupComponent {
             this.SignupForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Institutions Successfully Registered',
+              text: 'Successfully Registered',
             });
             this.router.navigateByUrl('/Sign-In');
           } else {
@@ -66,7 +66,7 @@ export class SignupComponent {
             this.SignupForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Professional Successfully Registered',
+              text: 'Successfully Registered',
             });
             this.router.navigateByUrl('/Sign-In');
           } else {
@@ -86,7 +86,7 @@ export class SignupComponent {
             this.SignupForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Student Successfully Registered',
+              text: 'Successfully Registered',
             });
             this.router.navigateByUrl('/Sign-In');
           } else {
@@ -106,7 +106,7 @@ export class SignupComponent {
             this.SignupForm.reset();
             Swal.fire({
               icon: 'success',
-              text: 'Employer Successfully Registered',
+              text: 'Successfully Registered',
             });
             this.router.navigateByUrl('/Sign-In');
           } else {

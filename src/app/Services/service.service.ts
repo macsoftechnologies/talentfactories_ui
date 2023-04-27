@@ -101,7 +101,10 @@ export class ServiceService {
 
   public studentSignIn(data: any): Observable<any> {
     try {
-      return this.httpClient.post(environment.baseUrl + 'student/login', data);
+      return this.httpClient.post(
+        environment.baseUrl + 'student/loginstudent',
+        data
+      );
     } catch (error) {
       return throwError('error');
     }

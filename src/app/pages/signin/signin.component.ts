@@ -58,6 +58,11 @@ export class SigninComponent {
         this.services.professionalSignIn(userdetails).subscribe((resp: any) => {
           console.log(resp);
           if (resp.statusCode == 200 || resp.statusCode == 201) {
+            localStorage.setItem(
+              'professionalId',
+              resp.logindetails.professionalId
+            );
+
             // console.log('Registered Successfully');
             this.signinForm.reset();
             Swal.fire({

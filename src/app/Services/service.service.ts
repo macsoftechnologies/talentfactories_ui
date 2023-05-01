@@ -121,4 +121,17 @@ export class ServiceService {
       return throwError('error');
     }
   }
+
+  // professional get by id values
+
+  public professionalByIds(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'professional/getProfessionById',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
 }

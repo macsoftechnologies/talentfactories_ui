@@ -49,3 +49,76 @@
   padding: 20px;
   background-color: #000;
 }
+
+.nav-item {
+  font-size: 18px;
+  margin: 15px 0px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: inherit;
+  color: #000;
+  font-weight: 600;
+}
+
+label {
+  color: #000;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+
+.control-width {
+  width: 85% !important;
+  line-height: 2.5 !important;
+}
+.submit {
+  width: 100px;
+  height: 40px;
+}
+.control-pass {
+  width: 25% !important;
+  line-height: 2.5 !important;
+}
+.padd-dropdown {
+  padding: 5px 10px !important;
+}
+.bg-colors {
+  background: #f6f9fc;
+  height: 100vh;
+}
+.margin-lefts {
+  margin-left: 2em;
+}
+.mg-left {
+  margin-left: 10px;
+}
+
+.mg-auto {
+  margin: auto;
+}
+
+.pg-all {
+  padding: 15px;
+}
+
+.modal-ft {
+  margin: 10px 0px;
+}
+
+.modal-ft .btn {
+  // margin-right: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+}
+
+.userdetails-form {
+  background: #fff;
+  padding: 45px;
+  border-radius: 20px;
+}
+
+.userdetails-form label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 25px;
+}

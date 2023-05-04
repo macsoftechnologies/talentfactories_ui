@@ -1290,11 +1290,14 @@
           role="tabpanel"
           aria-labelledby="v-pills-home-tab"
         >
-          <form>
+          <form class="userdetails-form">
             <div class="row">
               <div class="col-md-6 form-group">
                 <label>First Name</label> <br />
-                <p>{{ professionDetails?.name }}</p>
+                <p>
+                  {{ professionDetails?.name }}
+                  {{ professionDetails?.lastName }}
+                </p>
               </div>
 
               <div class="col-md-6 form-group">
@@ -1305,6 +1308,36 @@
               <div class="col-md-6 form-group">
                 <label>Mobile No</label><br />
                 <p>{{ professionDetails?.phNumber }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Address Lane 1</label><br />
+                <p>{{ professionDetails?.addressLine1 }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Address Lane 2</label><br />
+                <p>{{ professionDetails?.addressLine2 }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>City</label><br />
+                <p>{{ professionDetails?.city }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>State</label><br />
+                <p>{{ professionDetails?.state }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Country</label><br />
+                <p>{{ professionDetails?.country }}</p>
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Pin Code</label><br />
+                <p>{{ professionDetails?.pinCode }}</p>
               </div>
             </div>
           </form>
@@ -1379,10 +1412,14 @@
               />
             </div>
 
-            <!-- <div class="col-md-6 form-group">
+            <div class="col-md-6 form-group">
               <label>Last Name</label>
-              <input type="text" class="form-control control-width" />
-            </div> -->
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="lname"
+              />
+            </div>
 
             <div class="col-md-6 form-group">
               <label>E-Mail</label>
@@ -1402,35 +1439,59 @@
               />
             </div>
 
-            <!-- <div class="col-md-6 form-group">
+            <div class="col-md-6 form-group">
               <label>Address Line 1</label>
-              <input type="text" class="form-control control-width" />
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="adressLine1"
+              />
             </div>
 
             <div class="col-md-6 form-group">
-              <label>Address Line 1</label>
-              <input type="text" class="form-control control-width" />
+              <label>Address Line 2</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="adressLine2"
+              />
             </div>
 
             <div class="col-md-6 form-group">
               <label>City</label>
-              <input type="text" class="form-control control-width" />
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="city"
+              />
             </div>
 
             <div class="col-md-6 form-group">
               <label>State</label>
-              <input type="text" class="form-control control-width" />
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="state"
+              />
             </div>
 
             <div class="col-md-6 form-group">
               <label>Country</label>
-              <input type="text" class="form-control control-width" />
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="country"
+              />
             </div>
 
             <div class="col-md-6 form-group">
               <label>Pincode</label>
-              <input type="text" class="form-control control-width" />
-            </div> -->
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="pincode"
+              />
+            </div>
           </div>
         </form>
       </div>
@@ -1438,7 +1499,13 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="updateProfession()"
+        >
+          Save changes
+        </button>
       </div>
     </div>
   </div>

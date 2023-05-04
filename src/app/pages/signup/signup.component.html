@@ -3,21 +3,18 @@
     <img src="assets/img/svg/logo.svg" alt="" />
   </a>
 
-  <h3 class="fw-normal text-dark mt-5">Create your account</h3>
+  <h3 class="fw-normal text-dark mt-5">Create Your Account</h3>
 
-  <div class="row justify-content-center mt-4 pt-3">
+  <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4">
       <form [formGroup]="SignupForm">
         <div class="form-group">
-          <label
-            >First Name<sup
-              ><i class="fa fa-asterisk" aria-hidden="true"></i></sup
-          ></label>
           <input
             type="text"
-            class="form-control"
+            class="form-control form-control-lg bg-pastel-darkblue"
             id="Name"
             formControlName="Name"
+            placeholder="Enter The Name"
           />
           <!-- <span
           [class.is-invalid]="
@@ -35,14 +32,12 @@
           > -->
         </div>
         <div class="form-group">
-          <label
-            >E-mail<sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup
-          ></label>
           <input
             type="text"
-            class="form-control"
+            class="form-control form-control-lg bg-pastel-darkblue"
             id="Email"
             formControlName="Email"
+            placeholder="Enter The E-Mail"
           />
           <!-- <span
           [class.is-invalid]="
@@ -60,15 +55,13 @@
           > -->
         </div>
         <div class="form-group">
-          <label
-            >Phone Number<sup
-              ><i class="fa fa-asterisk" aria-hidden="true"></i></sup></label
-          ><input
-            type="number"
-            class="form-control"
+          <input
+            type="text"
+            class="form-control form-control-lg bg-pastel-darkblue"
             id="PhNumber"
             formControlName="PhNumber"
             onKeyPress="if(this.value.length==10) return false;"
+            placeholder="Enter The Mobile Number"
           />
           <!-- <span
           [class.is-invalid]="
@@ -86,14 +79,12 @@
           > -->
         </div>
         <div class="form-group">
-          <label>
-            Password<sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup
-          ></label>
           <input
             type="password"
-            class="form-control"
+            class="form-control form-control-lg bg-pastel-darkblue"
             id="Password"
             formControlName="Password"
+            placeholder="Enter The Password"
           />
           <!-- <span
              [class.is-invalid]="
@@ -132,8 +123,8 @@
 
           <input type="submit" class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift mt-4" value="Create account">
  -->
-        <button type="submit" class="btn btn-primary" (click)="signup()">
-          signup
+        <button type="submit" class="btn btn-primary mg-tp" (click)="signup()">
+          Sign Up
         </button>
         <div class="text-secondary fs-sm mt-5">
           Already have an account?

@@ -122,12 +122,199 @@ export class ServiceService {
     }
   }
 
+  // Institution get by id values
+
+  public institutionByIds(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'learning-org/getlearnOrgById',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
   // professional get by id values
 
   public professionalByIds(data: any): Observable<any> {
     try {
       return this.httpClient.post(
         environment.baseUrl + 'professional/getProfessionById',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // student get by id values
+
+  public studentByIds(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'student/getStudentById',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // Employer get by id values
+
+  public EmployerByIds(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'organization/getOrganizationById',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // get Institution details
+
+  public getInstitutionDetails(): Observable<any> {
+    try {
+      return this.httpClient.get(
+        environment.baseUrl + 'learning-org/getLearningOrg'
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // get Professional details
+
+  public getProfessionalDetails(): Observable<any> {
+    try {
+      return this.httpClient.get(environment.baseUrl + 'professional');
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // get Student details
+
+  public getStudentDetails(): Observable<any> {
+    try {
+      return this.httpClient.get(environment.baseUrl + 'student/getStudents');
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // get Student details
+
+  public getEmployerDetails(): Observable<any> {
+    try {
+      return this.httpClient.get(
+        environment.baseUrl + 'organization/getOrganization'
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // delete Institution Details
+
+  public institutionDelete(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'learning-org/deletelearnOrg',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // delete Professional Details
+
+  public professionalDelete(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'professional/deleteProfession',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // delete Student Details
+
+  public studentDelete(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'student/deleteStudent',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // delete Employer Details
+
+  public employerDelete(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'organization/deleteOrganization',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // Update Institution Details
+
+  public updateInstitution(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'learning-org/UpdatelearningOrg',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // Update Professional Details
+
+  public updateProfessional(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'professional/updateProfessional',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // Update Student Details
+
+  public updateStudent(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'student/updateStudent',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // Update Employer Details
+
+  public updateEmployer(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'organization/updateOrganzation',
         data
       );
     } catch (error) {

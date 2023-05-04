@@ -38,6 +38,10 @@ export class SigninComponent {
         this.services.institutionSignIn(userdetails).subscribe((resp: any) => {
           console.log(resp);
           if (resp.statusCode == 200 || resp.statusCode == 201) {
+            localStorage.setItem(
+              'learningOrgId',
+              resp.logindetails.learningOrgId
+            );
             // console.log('Registered Successfully');
             this.signinForm.reset();
             Swal.fire({
@@ -83,6 +87,7 @@ export class SigninComponent {
         this.services.studentSignIn(userdetails).subscribe((resp: any) => {
           console.log(resp);
           if (resp.statusCode == 200 || resp.statusCode == 201) {
+            localStorage.setItem('studentId', resp.logindetails.studentId);
             // console.log('Registered Successfully');
             this.signinForm.reset();
             Swal.fire({
@@ -103,6 +108,10 @@ export class SigninComponent {
         this.services.employerSignIn(userdetails).subscribe((resp: any) => {
           console.log(resp);
           if (resp.statusCode == 200 || resp.statusCode == 201) {
+            localStorage.setItem(
+              'organizationId',
+              resp.logindetails.organizationId
+            );
             // console.log('Registered Successfully');
             this.signinForm.reset();
             Swal.fire({

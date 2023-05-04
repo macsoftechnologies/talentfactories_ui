@@ -11,7 +11,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="index-2.html">
+    <a class="navbar-brand" href="#">
       <!-- <svg
         width="119px"
         height="19px"
@@ -39,45 +39,52 @@
 
     <div class="collapse navbar-collapse mt-md-2" id="navbar-collapse">
       <ul
-        class="nav flex-column nav-pills me-3 justify-content-center align-items-center"
+        class="nav flex-column nav-pills me-3 margin-lefts"
         id="v-pills-tab"
         role="tablist"
         aria-orientation="vertical"
         id="sidebar-nav"
       >
-        <li class="nav-item">
-          <button
-            class="nav-link active"
-            id="v-pills-home-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#v-pills-home"
-            type="button"
-            role="tab"
-            aria-controls="v-pills-home"
-            aria-selected="true"
-          >
-            My Profile
-          </button>
-        </li>
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 me-md-0 relative-top--2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-n</title>
+              <rect
+                x="48"
+                y="96"
+                width="416"
+                height="304"
+                rx="32.14"
+                ry="32.14"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <line
+                x1="16"
+                y1="416"
+                x2="496"
+                y2="416"
+                style="
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-miterlimit: 10;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
 
-        <li class="nav-item">
           <button
-            class="nav-link"
-            id="v-pills-profile-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#v-pills-profile"
-            type="button"
-            role="tab"
-            aria-controls="v-pills-profile"
-            aria-selected="false"
-          >
-            Change Password
-          </button>
-        </li>
-
-        <li class="nav-item">
-          <button
-            class="nav-link"
+            class="nav-link active mg-left"
             id="v-pills-messages-tab"
             data-bs-toggle="pill"
             data-bs-target="#v-pills-messages"
@@ -90,9 +97,44 @@
           </button>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 me-md-0 relative-top--2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-e</title>
+              <rect
+                x="128"
+                y="128"
+                width="336"
+                height="336"
+                rx="57"
+                ry="57"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <path
+                d="M383.5,128l.5-24a56.16,56.16,0,0,0-56-56H112a64.19,64.19,0,0,0-64,64V328a56.16,56.16,0,0,0,56,56h24"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
           <button
-            class="nav-link"
+            class="nav-link mg-left"
             id="v-pills-settings-tab"
             data-bs-toggle="pill"
             data-bs-target="#v-pills-settings"
@@ -102,6 +144,110 @@
             aria-selected="false"
           >
             Skills Profile
+          </button>
+        </li>
+
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 relative-top--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <polyline
+                points="160 368 32 256 160 144"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <polyline
+                points="352 368 480 256 352 144"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <line
+                x1="304"
+                y1="96"
+                x2="208"
+                y2="416"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
+          <button
+            class="nav-link mg-left"
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            Manage Profile
+          </button>
+        </li>
+
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 relative-top--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-s</title>
+              <polyline
+                points="336 176 225.2 304 176 255.8"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <path
+                d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
+          <button
+            class="nav-link mg-left"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+          >
+            Change Password
           </button>
         </li>
       </ul>
@@ -177,7 +323,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="index-2.html">
+    <a class="navbar-brand" href="#">
       <svg
         width="32px"
         height="19px"
@@ -211,7 +357,7 @@
       >
         <span class="avatar">
           <img
-            src="assets/img/uifaces/9.jpg"
+            src="assets/img/icon.jpg"
             class="avatar-image rounded-circle"
             alt=""
           />
@@ -1089,12 +1235,14 @@
           >
             <span class="avatar">
               <img
-                src="assets/img/uifaces/9.jpg"
+                src="assets/img/icon.jpg"
                 class="avatar-image rounded-circle"
                 alt=""
               />
             </span>
-            <span class="text-dark ms-2">XXXXX</span>
+            <span class="text-dark ms-2">{{
+              studentDetails?.name | uppercase
+            }}</span>
           </a>
           <div class="dropdown-menu dropdown-menu-end padd-dropdown">
             <!-- <a class="dropdown-item">My profile</a>
@@ -1107,71 +1255,98 @@
     </div>
   </nav>
 
-  <div class="container-fluid mt-4 mt-md-5 mb-6">
-    <div class="row text-center text-md-start">
+  <div class="container-fluid md-5 mb-6 bg-colors">
+    <div class="row text-center pt-5 text-md-start">
       <div class="tab-content" id="v-pills-tabContent">
         <div
           class="tab-pane fade show active"
+          id="v-pills-messages"
+          role="tabpanel"
+          aria-labelledby="v-pills-messages-tab"
+        >
+          <form>
+            <div>
+              <label>Upload Resume</label>
+              <input type="file" class="form-control control-pass" />
+            </div>
+          </form>
+
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary submit">Submit</button>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-pills-settings"
+          role="tabpanel"
+          aria-labelledby="v-pills-settings-tab"
+        >
+          Coming Soon
+        </div>
+
+        <div
+          class="tab-pane fade"
           id="v-pills-home"
           role="tabpanel"
           aria-labelledby="v-pills-home-tab"
         >
-          <form>
+          <form class="userdetails-form">
             <div class="row">
               <div class="col-md-6 form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control control-width" />
+                <label>First Name</label> <br />
+                <p>{{ studentDetails?.name }} {{ studentDetails?.lastName }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control control-width" />
+                <label>E-Mail Id</label><br />
+                <p>{{ studentDetails?.email }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>E-Mail</label>
-                <input type="text" class="form-control control-width" />
+                <label>Mobile No</label><br />
+                <p>{{ studentDetails?.phNumber }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>Phone Number</label>
-                <input type="text" class="form-control control-width" />
+                <label>Address Line1</label><br />
+                <p>{{ studentDetails?.addressLine1 }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>Address Line 1</label>
-                <input type="text" class="form-control control-width" />
+                <label>Address Line2</label><br />
+                <p>{{ studentDetails?.addressLine2 }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>Address Line 1</label>
-                <input type="text" class="form-control control-width" />
+                <label>City</label><br />
+                <p>{{ studentDetails?.city }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>City</label>
-                <input type="text" class="form-control control-width" />
+                <label>State</label><br />
+                <p>{{ studentDetails?.state }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>State</label>
-                <input type="text" class="form-control control-width" />
+                <label>Country</label><br />
+                <p>{{ studentDetails?.country }}</p>
               </div>
 
               <div class="col-md-6 form-group">
-                <label>Country</label>
-                <input type="text" class="form-control control-width" />
-              </div>
-
-              <div class="col-md-6 form-group">
-                <label>Pincode</label>
-                <input type="text" class="form-control control-width" />
+                <label>Pincode</label><br />
+                <p>{{ studentDetails?.pincode }}</p>
               </div>
             </div>
           </form>
 
           <div class="d-flex justify-content-center mt-4">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
+            <button
+              type="submit"
+              class="btn btn-primary submit"
+              (click)="modalUpdate()"
+            >
+              Update
+            </button>
           </div>
         </div>
         <div
@@ -1196,31 +1371,134 @@
             <button type="submit" class="btn btn-primary submit">Submit</button>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="v-pills-messages"
-          role="tabpanel"
-          aria-labelledby="v-pills-messages-tab"
-        >
-          <form>
-            <div>
-              <label>Upload Resume</label>
-              <input type="file" class="form-control control-pass" />
-            </div>
-          </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <div class="mt-4">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="updateModal"
+  tabindex="-1"
+  aria-labelledby="updateModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateModalLabel">Details Update</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="studentForm">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>First Name</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="name"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Last Name</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="lastName"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="email"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="phNumber"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 1</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="addressLine1"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 2</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="addressLine2"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>City</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="city"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>State</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="state"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Country</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="country"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Pincode</label>
+              <input
+                type="text"
+                class="form-control control-width"
+                formControlName="pincode"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="v-pills-settings"
-          role="tabpanel"
-          aria-labelledby="v-pills-settings-tab"
-        >
-          Coming Soon
-        </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="updateStudent()">
+          Save changes
+        </button>
       </div>
     </div>
   </div>

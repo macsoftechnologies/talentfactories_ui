@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "talentfactories_ui": {
+    "talentfactories-ui": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/talentfactories_ui",
+            "outputPath": "dist/talentfactories-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -75,13 +75,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "talentfactories_ui:build:production"
+              "browserTarget": "talentfactories-ui:build:production"
             },
             "development": {
-              "browserTarget": "talentfactories_ui:build:development"
+              "browserTarget": "talentfactories-ui:build:development"
             },
             "staging": {
-              "browserTarget": "talentfactories_ui:build:staging"
+              "browserTarget": "talentfactories-ui:build:staging"
             },
             "es5": {
               "browserTarget": "sm:build:es5"
@@ -92,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "talentfactories_ui:build"
+            "browserTarget": "talentfactories-ui:build"
           }
         },
         "test": {

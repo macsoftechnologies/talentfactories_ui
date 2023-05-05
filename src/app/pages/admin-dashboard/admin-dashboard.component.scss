@@ -110,7 +110,7 @@
 .nav-pills .nav-link.active {
   background-color: inherit;
   color: #000;
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 label {
@@ -172,4 +172,8 @@ label {
   border-radius: 5px;
   cursor: pointer;
   font-size: 10px;
+}
+
+button {
+  font-family: var(--bs-font-monospace) !important;
 }

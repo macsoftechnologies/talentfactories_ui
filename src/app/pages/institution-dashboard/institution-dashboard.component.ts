@@ -82,44 +82,44 @@ export class InstitutionDashboardComponent {
 
   updateInstitution() {
     console.log('hit');
-    if (this.institutionForm.valid) {
-      console.log('hit1');
-      let updateinstitutionObj = {
-        learningOrgId: this.learningOrgId,
-        name: this.institutionForm.value.name,
-        email: this.institutionForm.value.email,
-        phNumber: this.institutionForm.value.phNumber,
-        memebers: this.institutionForm.value.memebers,
-        courses: this.institutionForm.value.courses,
-        // resource: this.institutionForm.value.resource,
-        Location: this.institutionForm.value.Location,
-      };
+    // if (this.institutionForm.valid) {
+    //   console.log('hit1');
+    let updateinstitutionObj = {
+      learningOrgId: this.learningOrgId,
+      name: this.institutionForm.value.name,
+      email: this.institutionForm.value.email,
+      phNumber: this.institutionForm.value.phNumber,
+      memebers: this.institutionForm.value.memebers,
+      courses: this.institutionForm.value.courses,
+      // resource: this.institutionForm.value.resource,
+      Location: this.institutionForm.value.Location,
+    };
 
-      console.log('dsdsdssdsd', updateinstitutionObj);
+    console.log('dsdsdssdsd', updateinstitutionObj);
 
-      this.services
-        .updateInstitution(updateinstitutionObj)
-        .subscribe((updateResp) => {
-          if (updateResp.statusCode == 200) {
-            console.log('success');
-            Swal.fire({
-              icon: 'success',
-              text: 'Institution Details Updated Successfuly',
-              timer: 2000,
-              showConfirmButton: false,
-            });
-            $('#updateModal').modal('hide');
-            this.getInstitutionById();
-          } else {
-            console.log('error');
-            Swal.fire({
-              icon: 'error',
-              text: 'Please Add Unique language',
-              showConfirmButton: false,
-              timer: 3000,
-            });
-          }
-        });
-    }
+    this.services
+      .updateInstitution(updateinstitutionObj)
+      .subscribe((updateResp) => {
+        if (updateResp.statusCode == 200) {
+          console.log('success');
+          Swal.fire({
+            icon: 'success',
+            text: 'Institution Details Updated Successfuly',
+            timer: 2000,
+            showConfirmButton: false,
+          });
+          $('#updateModal').modal('hide');
+          this.getInstitutionById();
+        } else {
+          console.log('error');
+          Swal.fire({
+            icon: 'error',
+            text: 'Please Add Unique language',
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        }
+      });
+    // }
   }
 }

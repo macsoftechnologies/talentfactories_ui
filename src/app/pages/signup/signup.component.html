@@ -1,3 +1,4 @@
+<!-- <app-header></app-header> -->
 <section class="container text-center py-5 py-md-6 py-xl-7">
   <a href="index.html">
     <img src="assets/img/svg/logo.svg" alt="" />
@@ -126,11 +127,17 @@
         <button type="submit" class="btn btn-primary mg-tp" (click)="signup()">
           Sign Up
         </button>
-        <div class="text-secondary fs-sm mt-5">
+        <div class="text-secondary fs-sm mt-3">
           Already have an account?
           <a [routerLink]="['/Sign-In']">Sign in</a>
+        </div>
+
+        <div class="text-secondary fs-sm mt-3">
+          Back to Home Page Click Here
+          <a [routerLink]="['']">Home</a>
         </div>
       </form>
     </div>
   </div>
 </section>
+<!-- <app-footer></app-footer> -->

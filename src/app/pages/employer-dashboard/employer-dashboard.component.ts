@@ -75,7 +75,7 @@ export class EmployerDashboardComponent {
         location: this.employerForm.value.location,
       };
 
-      console.log(updateEmployerObj, 'dsdsdssdsd');
+      // console.log(updateEmployerObj, 'dsdsdssdsd');
 
       this.services
         .updateEmployer(updateEmployerObj)

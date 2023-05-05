@@ -58,7 +58,7 @@
 .nav-pills .nav-link.active {
   background-color: inherit;
   color: #000;
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 label {
@@ -115,10 +115,15 @@ label {
   background: #fff;
   padding: 45px;
   border-radius: 20px;
+  font-family: var(--bs-font-sans-serif);
 }
 
 .userdetails-form label {
   font-size: 18px;
   font-weight: 500;
   margin-top: 25px;
+}
+
+button {
+  font-family: var(--bs-font-monospace) !important;
 }

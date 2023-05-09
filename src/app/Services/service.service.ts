@@ -319,6 +319,7 @@ export class ServiceService {
       );
     } catch (error) {
       return throwError('error');
+      // return;
     }
   }
 }

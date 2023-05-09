@@ -881,14 +881,16 @@
 </nav>
 
 <div class="main-content">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-flex">
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-flex navbar-height"
+  >
     <div class="container-fluid">
       <!-- Form -->
       <form>
         <div class="input-group input-group-flush">
-          <div class="input-group-text">
+          <!-- <div class="input-group-text">
             <i class="fas fa-search relative-top--2"></i>
-          </div>
+          </div> -->
 
           <input
             type="text"
@@ -1290,9 +1292,13 @@
                     <!-- <td>(555) - 12345</td>
                     <td>text</td> -->
                     <td>
-                      <!-- <button class="btn-green" type="button">
+                      <button
+                        class="btn-green"
+                        type="button"
+                        (click)="institutionView(institutiondata)"
+                      >
                         <i class="fas fa-eye"></i>
-                      </button> -->
+                      </button>
                       <button
                         class="btn-red"
                         type="button"
@@ -1344,6 +1350,13 @@
                   <td>text</td> -->
                     <td>
                       <button
+                        class="btn-green"
+                        type="button"
+                        (click)="professionalView(professionaldata)"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button
                         class="btn-red"
                         type="button"
                         (click)="deleteProfession(professionaldata)"
@@ -1390,6 +1403,13 @@
                 <td>text</td> -->
                     <td>
                       <button
+                        class="btn-green"
+                        type="button"
+                        (click)="studentView(studentdata)"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button
                         class="btn-red"
                         type="button"
                         (click)="deleteStudent(studentdata)"
@@ -1435,6 +1455,13 @@
                 <td>text</td> -->
                     <td>
                       <button
+                        class="btn-green"
+                        type="button"
+                        (click)="employerView(employerdata)"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button
                         class="btn-red"
                         type="button"
                         (click)="deleteEmp(employerdata)"
@@ -1448,6 +1475,346 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--institution view Modal -->
+<div
+  class="modal fade"
+  id="viewInsitutionModal"
+  tabindex="-1"
+  aria-labelledby="viewInsitutionModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewInsitutionModalLabel">View Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>First Name</label>
+              <p>{{ institutionViewData?.name }}</p>
+            </div>
+
+            <!-- <div class="col-md-6 form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control control-width" />
+            </div> -->
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <p>{{ institutionViewData?.email }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <p>{{ institutionViewData?.phoneNumber }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Description</label>
+              <p>{{ institutionViewData?.description }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Memebers</label>
+              <p>{{ institutionViewData?.memebers }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Courses</label>
+              <p>{{ institutionViewData?.courses }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Location</label>
+              <p>{{ institutionViewData?.Location }}</p>
+            </div>
+
+            <!-- <div class="col-md-6 form-group">
+              <label>City</label>
+              <input type="text" class="form-control control-width" />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>State</label>
+              <input type="text" class="form-control control-width" />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Country</label>
+              <input type="text" class="form-control control-width" />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Pincode</label>
+              <input type="text" class="form-control control-width" />
+            </div> -->
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Professional view Modal -->
+<div
+  class="modal fade"
+  id="viewProfessionalModal"
+  tabindex="-1"
+  aria-labelledby="viewProfessionalModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewProfessionalModalLabel">
+          View Details
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>First Name</label>
+              <p>
+                {{ professionalViewData?.name }}
+                {{ professionalViewData?.lastName }}
+              </p>
+            </div>
+
+            <!-- <div class="col-md-6 form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control control-width" />
+            </div> -->
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <p>{{ professionalViewData?.email }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <p>{{ professionalViewData?.phNumber }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 1</label>
+              <p>{{ professionalViewData?.addressLine1 }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 2</label>
+              <p>{{ professionalViewData?.addressLine2 }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>City</label>
+              <p>{{ professionalViewData?.city }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>State</label>
+              <p>{{ professionalViewData?.state }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Country</label>
+              <p>{{ professionalViewData?.country }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Pincode</label>
+              <p>{{ professionalViewData?.pinCode }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Student view Modal -->
+<div
+  class="modal fade"
+  id="viewStudentModal"
+  tabindex="-1"
+  aria-labelledby="viewStudentModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewStudentModalLabel">View Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>First Name</label>
+              <p>
+                {{ studentViewData?.name }}
+                {{ studentViewData?.lastName }}
+              </p>
+            </div>
+
+            <!-- <div class="col-md-6 form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control control-width" />
+            </div> -->
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <p>{{ studentViewData?.email }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <p>{{ studentViewData?.phNumber }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 1</label>
+              <p>{{ studentViewData?.addressLine1 }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Address Line 2</label>
+              <p>{{ studentViewData?.addressLine2 }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>City</label>
+              <p>{{ studentViewData?.city }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>State</label>
+              <p>{{ studentViewData?.state }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Country</label>
+              <p>{{ studentViewData?.country }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Pincode</label>
+              <p>{{ studentViewData?.pincode }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Employer view Modal -->
+<div
+  class="modal fade"
+  id="viewEmployerModal"
+  tabindex="-1"
+  aria-labelledby="viewEmployerModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewEmployerModalLabel">View Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>First Name</label>
+              <p>
+                {{ employerViewData?.name }}
+              </p>
+            </div>
+
+            <!-- <div class="col-md-6 form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control control-width" />
+            </div> -->
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <p>{{ employerViewData?.email }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <p>{{ employerViewData?.phNumber }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Description</label>
+              <p>{{ employerViewData?.description }}</p>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Location</label>
+              <p>{{ employerViewData?.location }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
       </div>
     </div>
   </div>

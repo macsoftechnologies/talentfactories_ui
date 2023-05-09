@@ -881,14 +881,16 @@
 </nav>
 
 <div class="main-content">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-flex">
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-flex navbar-height"
+  >
     <div class="container-fluid">
       <!-- Form -->
       <form>
         <div class="input-group input-group-flush">
-          <div class="input-group-text">
+          <!-- <div class="input-group-text">
             <i class="fas fa-search relative-top--2"></i>
-          </div>
+          </div> -->
 
           <input
             type="text"
@@ -1264,16 +1266,21 @@
           role="tabpanel"
           aria-labelledby="v-pills-messages-tab"
         >
-          <form>
+          <form class="userdetails-form">
             <div>
               <label>Upload Resume</label>
               <input type="file" class="form-control control-pass" />
             </div>
-          </form>
 
-          <div class="mt-4">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
-          </div>
+            <div class="mt-4">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift mt-4 submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
         <div
           class="tab-pane fade"
@@ -1342,7 +1349,7 @@
           <div class="d-flex justify-content-center mt-4">
             <button
               type="submit"
-              class="btn btn-primary submit"
+              class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift submit"
               (click)="modalUpdate()"
             >
               Update
@@ -1355,7 +1362,7 @@
           role="tabpanel"
           aria-labelledby="v-pills-profile-tab"
         >
-          <form>
+          <form class="userdetails-form">
             <div class="form-group">
               <label>Old Password</label>
               <input type="text" class="form-control control-pass" />
@@ -1365,11 +1372,16 @@
               <label>New Password</label>
               <input type="text" class="form-control control-pass" />
             </div>
-          </form>
 
-          <div class="mt-4">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
-          </div>
+            <div class="mt-4">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift mt-4 submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1398,7 +1410,7 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="studentForm">
+        <form [formGroup]="studentForm" class="modal-form">
           <div class="row">
             <div class="col-md-6 form-group">
               <label>First Name</label>

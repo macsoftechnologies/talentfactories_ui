@@ -109,12 +109,12 @@
 
 .nav-pills .nav-link.active {
   background-color: inherit;
-  color: #000;
+  color: #1e2e50;
   // font-weight: 600;
 }
 
 label {
-  color: #000;
+  color: #1e2e50;
   font-weight: 600;
   margin: 10px 0px;
 }
@@ -173,7 +173,22 @@ label {
   cursor: pointer;
   font-size: 10px;
 }
+.btn-green {
+  background-color: #6ac16a;
+  border: none;
+  padding: 5px 5px;
+  margin-right: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
 
 button {
-  font-family: var(--bs-font-monospace) !important;
+  font-family: var(--bs-font-sans-serif) !important;
+  color: #1e2e50;
+}
+
+.navbar-height {
+  height: 70px;
 }

@@ -33,7 +33,7 @@ export class SignupComponent {
       let userdetails = {
         name: this.SignupForm.value.Name,
         email: this.SignupForm.value.Email,
-        phNumber: this.SignupForm.value.PhNumber,
+        // phNumber: this.SignupForm.value.PhNumber,
         password: this.SignupForm.value.Password,
       };
       console.log(userdetails);

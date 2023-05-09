@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
 import Swal from 'sweetalert2';
+declare const $: any;
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -13,6 +14,10 @@ export class AdminDashboardComponent {
   professionalList: any;
   studentList: any;
   employerList: any;
+  institutionViewData: any;
+  professionalViewData: any;
+  studentViewData: any;
+  employerViewData: any;
   constructor(private router: Router, private services: ServiceService) {}
 
   ngOnInit(): void {
@@ -192,5 +197,29 @@ export class AdminDashboardComponent {
         });
       }
     });
+  }
+
+  institutionView(data: any) {
+    $('#viewInsitutionModal').modal('show');
+    this.institutionViewData = data;
+    console.log('insititutionview', this.institutionViewData);
+  }
+
+  professionalView(data: any) {
+    $('#viewProfessionalModal').modal('show');
+    this.professionalViewData = data;
+    console.log('professionalview', this.professionalViewData);
+  }
+
+  studentView(data: any) {
+    $('#viewStudentModal').modal('show');
+    this.studentViewData = data;
+    console.log('studentview', this.studentViewData);
+  }
+
+  employerView(data: any) {
+    $('#viewEmployerModal').modal('show');
+    this.employerViewData = data;
+    console.log('employerview', this.employerViewData);
   }
 }

@@ -22,6 +22,7 @@ export class InstitutionDashboardComponent {
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
       phNumber: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
       memebers: new FormControl('', [Validators.required]),
       courses: new FormControl('', [Validators.required]),
       resource: new FormControl('', [Validators.required]),
@@ -63,6 +64,9 @@ export class InstitutionDashboardComponent {
     this.institutionForm.controls['phNumber'].setValue(
       this.institutionDetails.phoneNumber
     );
+    this.institutionForm.controls['description'].setValue(
+      this.institutionDetails.description
+    );
     this.institutionForm.controls['memebers'].setValue(
       this.institutionDetails.memebers
     );
@@ -89,6 +93,7 @@ export class InstitutionDashboardComponent {
       name: this.institutionForm.value.name,
       email: this.institutionForm.value.email,
       phNumber: this.institutionForm.value.phNumber,
+      description: this.institutionForm.value.description,
       memebers: this.institutionForm.value.memebers,
       courses: this.institutionForm.value.courses,
       // resource: this.institutionForm.value.resource,

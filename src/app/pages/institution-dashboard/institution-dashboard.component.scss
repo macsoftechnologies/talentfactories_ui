@@ -61,12 +61,12 @@ body {
 
 .nav-pills .nav-link.active {
   background-color: inherit;
-  color: #000;
+  color: #1e2e50;
   // font-weight: 300;
 }
 
 label {
-  color: #000;
+  color: #1e2e50;
   font-weight: 600;
   margin: 10px 0px;
 }
@@ -78,6 +78,7 @@ label {
 .submit {
   width: 100px;
   height: 40px;
+  color: #fff;
 }
 .control-pass {
   width: 25% !important;
@@ -129,5 +130,20 @@ label {
 }
 
 button {
-  font-family: var(--bs-font-monospace) !important;
+  font-family: var(--bs-font-sans-serif) !important;
+  color: #1e2e50;
+}
+
+.navbar-height {
+  height: 70px;
+}
+
+.dropdown-item {
+  padding: 10px 10px !important;
+}
+.modal-form {
+  padding: 0px 10px;
+}
+.modal-form input {
+  padding-left: 10px;
 }

@@ -1419,7 +1419,7 @@
               <label>First Name</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="name"
               />
             </div>
@@ -1428,7 +1428,7 @@
               <label>Last Name</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="lname"
               />
             </div>
@@ -1437,7 +1437,7 @@
               <label>E-Mail</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="email"
               />
             </div>
@@ -1446,7 +1446,7 @@
               <label>Phone Number</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="phNumber"
               />
             </div>
@@ -1455,7 +1455,7 @@
               <label>Address Line 1</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="adressLine1"
               />
             </div>
@@ -1464,7 +1464,7 @@
               <label>Address Line 2</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="adressLine2"
               />
             </div>
@@ -1473,7 +1473,7 @@
               <label>City</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="city"
               />
             </div>
@@ -1482,7 +1482,7 @@
               <label>State</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="state"
               />
             </div>
@@ -1491,7 +1491,7 @@
               <label>Country</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="country"
               />
             </div>
@@ -1500,7 +1500,7 @@
               <label>Pincode</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="pincode"
               />
             </div>
@@ -1508,12 +1508,16 @@
         </form>
       </div>
       <div class="modal-footer modal-ft">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          class="btn btn-secondary close"
+          data-bs-dismiss="modal"
+        >
           Close
         </button>
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary save"
           (click)="updateProfession()"
         >
           Save changes

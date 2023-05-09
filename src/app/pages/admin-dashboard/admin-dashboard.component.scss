@@ -126,6 +126,7 @@ label {
 .submit {
   width: 100px;
   height: 40px;
+  color: #fff;
 }
 .control-pass {
   width: 25% !important;
@@ -191,4 +192,23 @@ button {
 
 .navbar-height {
   height: 70px;
+}
+
+.dropdown-item {
+  padding: 10px 10px !important;
+}
+
+.modal-footer .close {
+  color: #fff;
+}
+
+.modal-header h5 {
+  color: #1e2e50;
+  margin-bottom: 10px;
+}
+
+.modal-header .btn-close {
+  color: #1e2e50;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }

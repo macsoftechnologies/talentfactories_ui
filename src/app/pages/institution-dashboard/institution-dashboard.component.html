@@ -1411,7 +1411,7 @@
               <label>First Name</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="name"
               />
             </div>
@@ -1419,7 +1419,7 @@
               <label>E-Mail</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="email"
               />
             </div>
@@ -1428,7 +1428,7 @@
               <label>Phone Number</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="phNumber"
               />
             </div>
@@ -1437,7 +1437,7 @@
               <label>Description</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="description"
               />
             </div>
@@ -1446,7 +1446,7 @@
               <label>Memebers</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="memebers"
               />
             </div>
@@ -1455,7 +1455,7 @@
               <label>Courses</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="courses"
               />
             </div>
@@ -1473,7 +1473,7 @@
               <label>Location</label>
               <input
                 type="text"
-                class="form-control control-width"
+                class="form-control control-width bg-pastel-darkblue"
                 formControlName="Location"
               />
             </div>
@@ -1481,12 +1481,16 @@
         </form>
       </div>
       <div class="modal-footer modal-ft">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          class="btn btn-secondary close"
+          data-bs-dismiss="modal"
+        >
           Close
         </button>
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary save"
           (click)="updateInstitution()"
         >
           Save changes

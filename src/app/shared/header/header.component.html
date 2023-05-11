@@ -78,85 +78,13 @@
               </li>
             </ul>
           </li> -->
-        <li class="nav-item dropdown">
-          <a
-            href="#"
-            class="nav-link dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            data-bs-auto-close="outside"
-          >
-            Pages
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" [routerLink]="['/job-postpage']">
+            Job
           </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" [routerLink]="['/About-Us']">
-                About Us
-              </a>
-            </li>
-            <!-- <li>
-                <a href="contact.html" class="dropdown-item">
-                  Contact
-                </a>
-              </li>
-              <li class="dropdown dropend">
-                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Blog
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="blog.html">Blog feed</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="blog-post.html">Blog post</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown dropend">
-                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="account.html">General</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="account-notifications.html">Notifications</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="account-billing.html">Billing & Payments</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="account-teammates.html">Teammates</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown dropend">
-                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Pricing
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="pricing.html">Pricing plans</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="pricing-charts.html">Pricing charts</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="support.html" class="dropdown-item">
-                  Support
-                </a>
-              </li>
-              <li>
-                <a href="invoice.html" class="dropdown-item">
-                  Invoice
-                </a>
-              </li> -->
-          </ul>
         </li>
+
         <li class="nav-item dropdown">
           <a
             href="#"
@@ -170,21 +98,21 @@
           </a>
           <ul class="dropdown-menu">
             <!-- <li class="dropdown dropend">
-                <a [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Sign up
-                </a>
-                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="sign-up.html">Basic</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="sign-up-quote.html">Side quote</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="sign-up-cover.html">Side cover</a>
-                  </li>
-                </ul> 
-              </li>-->
+                  <a [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign up
+                  </a>
+                   <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="sign-up.html">Basic</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="sign-up-quote.html">Side quote</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="sign-up-cover.html">Side cover</a>
+                    </li>
+                  </ul> 
+                </li>-->
             <li class="dropdown dropend">
               <a
                 class="dropdown-item dropdown-toggle"
@@ -340,10 +268,10 @@
               </a>
               <ul class="dropdown-menu dropdown-sign">
                 <!-- <li class="dropdown dropend">
-                    <a (click)="signupType('Admin')" [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Sign up
-                    </a>
-                  </li> -->
+                      <a (click)="signupType('Admin')" [routerLink]="['/Sign-Up']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign up
+                      </a>
+                    </li> -->
                 <li class="dropdown dropend">
                   <a
                     (click)="signupType('Admin')"
@@ -359,46 +287,137 @@
               </ul>
             </li>
             <!-- <li class="dropdown dropend">
-                <a [routerLink]="['/Sign-In']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Sign in
-                </a>
-                 <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="sign-in.html">Basic</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="sign-in-quote.html">Side quote</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="sign-in-cover.html">Side cover</a>
-                  </li>
-                </ul> -->
+                  <a [routerLink]="['/Sign-In']" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign in
+                  </a>
+                   <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="sign-in.html">Basic</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="sign-in-quote.html">Side quote</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="sign-in-cover.html">Side cover</a>
+                    </li>
+                  </ul> -->
             <!-- </li>
+                <li class="dropdown dropend">
+                  <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Recover password
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="recover-password.html">Basic</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="recover-password-cover.html">Side cover</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="email-verification.html" class="dropdown-item">
+                    Email verification
+                  </a>
+                </li>
+                <li>
+                  <a href="two-step-verification.html" class="dropdown-item">
+                    2-step verification
+                  </a>
+                </li> -->
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" [routerLink]="['/contact-us']">
+            Contact
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" [routerLink]="['/About-Us']">About Us</a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            data-bs-auto-close="outside"
+          >
+            Pages
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="['/About-Us']">
+                About Us
+              </a>
+            </li>
+            <li>
+                <a href="contact.html" class="dropdown-item">
+                  Contact
+                </a>
+              </li>
               <li class="dropdown dropend">
                 <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Recover password
+                  Blog
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="recover-password.html">Basic</a>
+                    <a class="dropdown-item" href="blog.html">Blog feed</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="recover-password-cover.html">Side cover</a>
+                    <a class="dropdown-item" href="blog-post.html">Blog post</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropend">
+                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="account.html">General</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="account-notifications.html">Notifications</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="account-billing.html">Billing & Payments</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="account-teammates.html">Teammates</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown dropend">
+                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Pricing
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="pricing.html">Pricing plans</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pricing-charts.html">Pricing charts</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="email-verification.html" class="dropdown-item">
-                  Email verification
+                <a href="support.html" class="dropdown-item">
+                  Support
                 </a>
               </li>
               <li>
-                <a href="two-step-verification.html" class="dropdown-item">
-                  2-step verification
+                <a href="invoice.html" class="dropdown-item">
+                  Invoice
                 </a>
-              </li> -->
+              </li>
           </ul>
-        </li>
+        </li> -->
+
         <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Theme docs

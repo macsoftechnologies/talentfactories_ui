@@ -16,6 +16,9 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { JobpostpageComponent } from './jobpostpage/jobpostpage.component';
+import { JobdetailspageComponent } from './jobdetailspage/jobdetailspage.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     StudentDashboardComponent,
     HeaderComponent,
     FooterComponent,
+    JobpostpageComponent,
+    JobdetailspageComponent,
+    ContactUsComponent,
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,9 @@ import { ProfessionalDashboardComponent } from './professional-dashboard/profess
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { JobpostpageComponent } from './jobpostpage/jobpostpage.component';
+import { JobdetailspageComponent } from './jobdetailspage/jobdetailspage.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   {
@@ -39,6 +42,19 @@ const routes: Routes = [
     path: 'admin-dashboard',
     component: AdminDashboardComponent,
   },
+  {
+    path: 'job-postpage',
+    component: JobpostpageComponent,
+  },
+  {
+    path: 'job-detailspage',
+    component: JobdetailspageComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
+  },
+
   {
     path: 'Sign-In',
     component: SigninComponent,

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   constructor() {}
   ngOnInit() {}
+
   signupType(type: any) {
     localStorage.setItem('type', type);
     console.log('typeAdmin');

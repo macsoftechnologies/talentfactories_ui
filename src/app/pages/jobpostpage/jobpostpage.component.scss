@@ -1,3 +1,12 @@
 .bg-color {
   background-color: var(--bs-body-bg);
 }
+.card {
+  border-radius: 30px !important;
+}
+.card-title {
+  margin-bottom: 15px;
+}
+.text-leftside {
+  text-align: left !important;
+}

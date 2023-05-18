@@ -16,6 +16,9 @@ export class ProfessionalDashboardComponent {
   userName: any;
   professionForm: any;
   professionalId: any;
+  jobNotifyList: any;
+  applicantForm: any;
+  getApplicantId: any;
   constructor(private router: Router, private services: ServiceService) {
     this.professionForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -29,11 +32,19 @@ export class ProfessionalDashboardComponent {
       country: new FormControl('', [Validators.required]),
       pincode: new FormControl('', [Validators.required]),
     });
+
+    this.applicantForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      phNumber: new FormControl('', [Validators.required]),
+    });
   }
 
   ngOnInit(): void {
     this.getByProfessionId = localStorage.getItem('professionalId');
     this.getProfession();
+
+    this.getJobNotification();
   }
 
   getProfession() {
@@ -45,6 +56,28 @@ export class ProfessionalDashboardComponent {
         this.professionDetails = respp.resp;
         // this.userName = respp.resp.name;
       }
+    });
+  }
+
+  // get job notification
+
+  getJobNotification() {
+    this.services.getJobNotify().subscribe((notifyResp) => {
+      if (notifyResp.statusCode == 200) {
+        this.jobNotifyList = notifyResp.data;
+        // console.log('jobNotifyList', this.jobNotifyList);
+      }
+    });
+  }
+
+  // search jobs
+
+  getJobSearchDetails() {
+    const jobTitle = 'value1';
+    const jobWorkCountry = '';
+
+    this.services.getSearchJob(jobTitle, jobWorkCountry).subscribe((data) => {
+      // Handle the response data
     });
   }
 
@@ -139,6 +172,43 @@ export class ProfessionalDashboardComponent {
             });
           }
         });
+    }
+  }
+
+  addAplicant(data: any) {
+    $('#applicantModal').modal('show');
+    this.getApplicantId = data;
+  }
+
+  addAppicantDetails() {
+    if (this.applicantForm.valid) {
+      let applicantObj = {
+        jobId: this.getApplicantId.jobId,
+        name: this.applicantForm.value.name,
+        email: this.applicantForm.value.email,
+        phoneNumber: this.applicantForm.value.phNumber,
+      };
+
+      this.services.applyApplicant(applicantObj).subscribe((applicantResp) => {
+        if (applicantResp.statusCode == 200) {
+          Swal.fire({
+            icon: 'success',
+            text: 'Add Applicant Details Successfuly',
+            timer: 2000,
+            showConfirmButton: false,
+          });
+          this.applicantForm.reset();
+          $('#applicantModal').modal('hide');
+        } else {
+          console.log('error');
+          Swal.fire({
+            icon: 'error',
+            text: 'Please Add applicant Correctly',
+            showConfirmButton: false,
+            timer: 3000,
+          });
+        }
+      });
     }
   }
 }

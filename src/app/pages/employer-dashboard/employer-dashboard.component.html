@@ -250,6 +250,98 @@
             Change Password
           </button>
         </li>
+
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 relative-top--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-s</title>
+              <polyline
+                points="336 176 225.2 304 176 255.8"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <path
+                d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
+          <button
+            class="nav-link mg-left"
+            id="v-pills-applicant-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-applicant"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-applicant"
+            aria-selected="false"
+          >
+            Applicant List
+          </button>
+        </li>
+
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 relative-top--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-s</title>
+              <polyline
+                points="336 176 225.2 304 176 255.8"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <path
+                d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
+          <button
+            class="nav-link mg-left"
+            id="v-pills-jobpost-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-jobpost"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-jobpost"
+            aria-selected="false"
+          >
+            Job Post
+          </button>
+        </li>
       </ul>
 
       <!-- <hr class="navbar-divider mt-auto mb-4"> -->
@@ -1360,6 +1452,155 @@
               >
                 Submit
               </button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="v-pills-applicant"
+          role="tabpanel"
+          aria-labelledby="v-pills-applicant-tab"
+        >
+          <div id="customers" class="card mt-4">
+            <div class="table-responsive">
+              <table class="table table-sm card-table table-nowrap">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody class="list">
+                  <tr *ngFor="let appList of applicantList; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td class="item-email">{{ appList.name }}</td>
+                    <td class="item-role">{{ appList.email }}</td>
+                    <td class="item-role">{{ appList.phoneNumber }}</td>
+                    <!-- <td>(555) - 12345</td>
+              <td>text</td> -->
+                    <td>
+                      <!-- <button class="btn-green" type="button">
+                        <i class="fas fa-eye"></i>
+                      </button> -->
+                      <button
+                        class="btn-red"
+                        type="button"
+                        (click)="deleteApplicant(appList)"
+                      >
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="v-pills-jobpost"
+          role="tabpanel"
+          aria-labelledby="v-pills-jobpost-tab"
+        >
+          <form [formGroup]="jobPostForm" class="jobdetails-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label>Job Title</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobTitle"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Short Notes</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobShortNotes"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Long Notes</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobLongNotes"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>City</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobWorkCity"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>State</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobWorkState"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Country</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobWorkCountry"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Mandatory Skills</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobMandatorySkills"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Optional Skills</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="jobOptionalSkills"
+                />
+              </div>
+
+              <div class="col-md-6 form-group">
+                <label>Status</label>
+                <input
+                  type="text"
+                  class="form-control control-width bg-pastel-darkblue"
+                  formControlName="JobStatus"
+                />
+              </div>
+
+              <div
+                class="d-flex justify-content-center mt-5"
+                (click)="jobPost()"
+              >
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift submit"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </form>
         </div>

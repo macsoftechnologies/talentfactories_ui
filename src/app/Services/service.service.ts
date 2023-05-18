@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
@@ -320,6 +320,86 @@ export class ServiceService {
     } catch (error) {
       return throwError('error');
       // return;
+    }
+  }
+
+  // get job notification for professional
+
+  public getJobNotify(): Observable<any> {
+    try {
+      return this.httpClient.get(environment.baseUrl + 'jobs/getJobs');
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // get job notification for professional
+
+  public getApplicant(): Observable<any> {
+    try {
+      return this.httpClient.get(
+        environment.baseUrl + 'applicant/applicantList'
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  // apply applicant details for job
+
+  public applyApplicant(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'applicant/addaplicant',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+      // return;
+    }
+  }
+
+  // post job notification details
+
+  public postJobDetails(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(environment.baseUrl + 'jobs/addJobs', data);
+    } catch (error) {
+      return throwError('error');
+      // return;
+    }
+  }
+
+  // delete apply job applicant
+
+  public deleteJobApplicant(data: any): Observable<any> {
+    try {
+      return this.httpClient.post(
+        environment.baseUrl + 'applicant/removeApplicant',
+        data
+      );
+    } catch (error) {
+      return throwError('error');
+    }
+  }
+
+  public getSearchJob(
+    jobTitle: string,
+    jobWorkCountry: string
+  ): Observable<any> {
+    // Create an instance of HttpParams to handle query parameters
+    try {
+      let params = new HttpParams()
+        .set('jobTitle', jobTitle)
+        .set('jobWorkCountry', jobWorkCountry);
+
+      // Make the GET request with the specified query parameters
+      return this.httpClient.get(environment.baseUrl + 'jobs/search', {
+        params,
+      });
+      // return this.http.get('https://your-api-url.com/data', { params });
+    } catch (error) {
+      return throwError('error');
     }
   }
 }

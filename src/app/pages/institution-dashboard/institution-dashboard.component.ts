@@ -62,7 +62,7 @@ export class InstitutionDashboardComponent {
       this.institutionDetails.email
     );
     this.institutionForm.controls['phNumber'].setValue(
-      this.institutionDetails.phoneNumber
+      this.institutionDetails.phNumber
     );
     this.institutionForm.controls['description'].setValue(
       this.institutionDetails.description

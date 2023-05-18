@@ -250,6 +250,52 @@
             Change Password
           </button>
         </li>
+
+        <li class="nav-item d-flex">
+          <span class="svg-icon text-primary me-2 relative-top--1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+            >
+              <title>ionicons-v5-s</title>
+              <polyline
+                points="336 176 225.2 304 176 255.8"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+              <path
+                d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 32px;
+                "
+              />
+            </svg>
+          </span>
+
+          <button
+            class="nav-link mg-left"
+            id="v-pills-Jobnotify-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-Jobnotify"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-Jobnotify"
+            aria-selected="false"
+          >
+            Job Notification
+          </button>
+        </li>
       </ul>
 
       <!-- <hr class="navbar-divider mt-auto mb-4"> -->
@@ -1386,6 +1432,56 @@
             </button>
           </div>
         </div>
+
+        <div
+          class="tab-pane fade"
+          id="v-pills-Jobnotify"
+          role="tabpanel"
+          aria-labelledby="v-pills-Jobnotify-tab"
+        >
+          <div id="customers" class="mt-2">
+            <div class="bootstrap snippets bootdeys">
+              <div class="row">
+                <div
+                  class="col-md-4 col-sm-6 content-card"
+                  *ngFor="let jobList of jobNotifyList"
+                >
+                  <div class="card-big-shadow">
+                    <div
+                      class="card card-just-text"
+                      data-background="color"
+                      data-color="blue"
+                      data-radius="none"
+                    >
+                      <div class="content">
+                        <h4 class="category">
+                          {{ jobList.jobTitle | uppercase }}
+                        </h4>
+                        <p class="title">{{ jobList.jobShortNotes }}</p>
+                        <p class="description">
+                          {{ jobList.jobLongNotes }}
+                        </p>
+                        <p>{{ jobList.jobWorkCity }}</p>
+                        <p>{{ jobList.jobWorkState }}</p>
+                        <p>{{ jobList.jobWorkCountry }}</p>
+
+                        <div class="mt-4" (click)="addAplicant(jobList)">
+                          <button
+                            type="submit"
+                            class="btn btn-primary btn-lg shadow-light text-uppercase-bold-sm hover-lift mt-2 submit"
+                          >
+                            Apply Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end card -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1521,6 +1617,79 @@
           (click)="updateProfession()"
         >
           Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Applicant Modal -->
+<div
+  class="modal fade"
+  id="applicantModal"
+  tabindex="-1"
+  aria-labelledby="applicantModalLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable mg-auto"
+  >
+    <div class="modal-content pg-all">
+      <div class="modal-header">
+        <h5 class="modal-title" id="applicantModalLabel">Apply Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="applicantForm" class="modal-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label>Full Name</label>
+              <input
+                type="text"
+                class="form-control control-width bg-pastel-darkblue"
+                formControlName="name"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>E-Mail</label>
+              <input
+                type="text"
+                class="form-control control-width bg-pastel-darkblue"
+                formControlName="email"
+              />
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label>Phone Number</label>
+              <input
+                type="text"
+                class="form-control control-width bg-pastel-darkblue"
+                formControlName="phNumber"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer modal-ft">
+        <button
+          type="button"
+          class="btn btn-secondary close"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary save"
+          (click)="addAppicantDetails()"
+        >
+          Apply
         </button>
       </div>
     </div>

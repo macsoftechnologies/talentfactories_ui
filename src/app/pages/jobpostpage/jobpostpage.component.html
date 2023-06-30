@@ -13,19 +13,32 @@
   <!-- Posts -->
   <!-- <section class="mt-6 bg-color"> -->
   <div class="container mt-6">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <div class="row">
       <!-- Post -->
-      <div class="col mt-2">
+      <div
+        class="col-md-4 col-sm-6 content-card"
+        *ngFor="let jobList of jobNotifyList"
+      >
         <div
           class="card shadow-light hover-lift-light"
           [routerLink]="['/job-detailspage']"
         >
           <div class="card-body">
             <!-- Title -->
-            <h4 class="card-title"><b>Angular Developer</b></h4>
+            <h4 class="card-title">
+              <b>{{ jobList.jobTitle | uppercase }}</b>
+            </h4>
             <h6 class="text-leftside">Macsof Technologies</h6>
-            <p class="text-leftside">Type Script, Angular</p>
-            <p class="text-leftside">Vizag, Andhra Pradesh</p>
+            <h6 class="text-leftside">{{ jobList?.jobLongNotes }}</h6>
+            <p class="text-leftside">{{ jobList?.jobShortNotes }}</p>
+            <p class="text-leftside">
+              {{ jobList?.jobWorkCity }}&nbsp;&nbsp;{{ jobList?.jobWorkState }}
+            </p>
+            <p class="text-leftside">
+              {{ jobList?.jobWorkCountry }}&nbsp;&nbsp;{{
+                jobList?.jobWorkZipcode
+              }}
+            </p>
             <p class="text-leftside">
               After sending message, with in 3 minute you will received full
               detail on your WhatssApp
@@ -35,73 +48,12 @@
           <!-- Author -->
           <div class="card-bottom-info">
             <span class="text-uppercase-xs text-muted ms-2">
-              David Gilmour
+              <!-- {{ jobList?.jobPostedBy }} -->
+              {{ employersDetails?.name }}
             </span>
             <div class="text-uppercase-xs text-muted ms-auto">
               <i class="far fa-calendar relative-top--1"></i>
-              May 11
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Post -->
-      <div class="col mt-2">
-        <div
-          class="card shadow-light hover-lift-light"
-          [routerLink]="['/job-detailspage']"
-        >
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title"><b>React Developer</b></h4>
-            <h6 class="text-leftside">Macsof Technologies</h6>
-            <p class="text-leftside">Java Script, react Technologies</p>
-            <p class="text-leftside">Vizag, Andhra Pradesh</p>
-            <p class="text-leftside">
-              After sending message, with in 3 minute you will received full
-              detail on your WhatssApp
-            </p>
-          </div>
-
-          <!-- Author -->
-          <div class="card-bottom-info">
-            <span class="text-uppercase-xs text-muted ms-2">
-              David Gilmour
-            </span>
-            <div class="text-uppercase-xs text-muted ms-auto">
-              <i class="far fa-calendar relative-top--1"></i>
-              May 11
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Post -->
-      <div class="col mt-2">
-        <div
-          class="card shadow-light hover-lift-light"
-          [routerLink]="['/job-detailspage']"
-        >
-          <div class="card-body">
-            <!-- Title -->
-            <h4 class="card-title"><b>Vue Developer</b></h4>
-            <h6 class="text-leftside">Macsof Technologies</h6>
-            <p class="text-leftside">Java Script, Vue Technologies</p>
-            <p class="text-leftside">Vizag, Andhra Pradesh</p>
-            <p class="text-leftside">
-              After sending message, with in 3 minute you will received full
-              detail on your WhatssApp
-            </p>
-          </div>
-
-          <!-- Author -->
-          <div class="card-bottom-info">
-            <span class="text-uppercase-xs text-muted ms-2">
-              David Gilmour
-            </span>
-            <div class="text-uppercase-xs text-muted ms-auto">
-              <i class="far fa-calendar relative-top--1"></i>
-              May 11
+              {{ jobList?.jobPostedDate | date }}
             </div>
           </div>
         </div>
